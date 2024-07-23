@@ -1,0 +1,78 @@
+// Header Variables
+$header_btn_bg_color: tomato;
+$header_btn_text_color: #6a6a6a;
+
+
+.header {
+    height: 34vw;
+    background: url('header_img.png') no-repeat;
+    margin: 30px auto;
+    background-size: contain;
+    position: relative;
+
+    .header-contents {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5vw;
+        max-width: 50%;
+        bottom: 10%;
+        left: 6vw;
+        animation: fadeIn 3s ease-in-out;
+
+        h2 {
+            font-weight: 500;
+            font-size: max(4.5vw, 22px);
+            color: white;
+        }
+
+        p {
+            font-size: 1vw;
+            color: white;
+        }
+
+        button {
+            padding: 1vw 2.3vw;
+            border-radius: 50px;
+            font-size: max(1vw, 13px);
+            font-weight: 500;
+            border: none;
+            color: $header_btn_text_color;
+            transition: all .3s;
+        }
+
+        button:hover {
+            background-color: $header_btn_bg_color;
+            color: white;
+            box-shadow: 0 0 .5px rgb(255, 132, 132);
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+// Media Queries
+
+@media screen and (max-width:1050px) {
+
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media screen and (max-width:750px) {
+
+    .header-contents {
+        max-width: 65%;
+    }
+
+    .header-contents p {
+        display: none;
+    }
+
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+}
